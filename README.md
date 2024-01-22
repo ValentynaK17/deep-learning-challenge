@@ -12,15 +12,17 @@ We can help a business to predict whether applicants will be successful if funde
 #### Data Preprocessing
 We are trying to predict a success of the applicant, so our target variable is ‘IS_SUCCESSFUL’ value.
 The success of the applicant is dependent from such things as:
- - Applicant itself
- - Type of the application
- - Affiliation and organization type
- - Such independent classifications as: use case, internal classification of the application, income range
- - Amount of funding requested
+ - Applicant itself,
+ - Type of the application,
+ - Affiliated sector of industry and Organization type,
+ - Such independent classifications as: Use case for funding, Government organization classification, Income range,
+ - Amount of funding requested,
  - Whether there were any special considerations for application.
      
-So as features we have the following columns: NAME, APPLICATION_TYPE, AFFILIATION, CLASSIFICATION, USE_CASE, ORGANIZATION, STATUS, INCOME_AMT, SPECIAL_CONSIDERATIONS, ASK_AMT. <br>
-Data associated with 'EIN' and 'STATUS' were ignored, because EIN is just an id in the internal system without any impact on success of the applicant and 'STATUS' column has same value for all the rows, so does not really informative for predictions.<br>
+So, as features we have the following columns: *NAME*, *APPLICATION_TYPE*, *AFFILIATION*, *CLASSIFICATION*, *USE_CASE*, *ORGANIZATION*, *STATUS*, *INCOME_AMT*, *SPECIAL_CONSIDERATIONS* and *ASK_AMT*. <br>
+Data associated with 'EIN' and 'STATUS' were ignored, because: 
+ 1. EIN is just an id in the internal system without any impact on success of the applicant,
+ 2. 'STATUS' column has same value for all the rows, that is why is not really informative for predictions.<br>
 #### Compiling, Training, and Evaluating the Model
 The structure of final neural network model, which showed best result is the following:
 | Layer | Number of Neurons| Activation Function|
